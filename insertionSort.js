@@ -7,7 +7,7 @@ for(let i = 1; i < arr.length; i++)
 	let j = i - 1;
     let m = i;
     while ( j >= 0 && arr[j] > arr[m]){
-    	arr.splice(j, 0, arr.splice(m,1));
+    	arr.splice(j, 0, arr.splice(m,1)[0]);
         m = j;
         j--;
     }
