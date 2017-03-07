@@ -11,10 +11,13 @@ const partitionAndRecurse = (array, startIdx, endIdx) => {
             }
         }
         // left of pivot
-        partitionAndRecurse(nums, startIdx, p);
+        if(startIdx !== p) {
+        	partitionAndRecurse(nums, startIdx, p);
+        }
         // right of pivot
-        p++;
-        partitionAndRecurse(nums, p, endIdx);
+        if ( ++p != endIdx) {
+        	partitionAndRecurse(nums, p, endIdx);
+        }
     }
 };
 
